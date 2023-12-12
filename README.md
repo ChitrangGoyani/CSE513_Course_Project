@@ -1,4 +1,4 @@
-## CSE513 Course Project  
+## CSE597 Course Project  
 * Task: Zero-shot image captioning
 * Chitrang Goyani - cbg5586@psu.edu
 * Paper: https://openaccess.thecvf.com/content/ICCV2023/html/Fei_Transferable_Decoding_with_Visual_Entities_for_Zero-Shot_Image_Captioning_ICCV_2023_paper.html
