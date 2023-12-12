@@ -1,0 +1,24 @@
+args: {'device': 'cuda:0', 'clip_model': 'ViT-B/32', 'language_model': 'gpt2', 'continuous_prompt_length': 10, 'clip_project_length': 10, 'temperature': 0.01, 'top_k': 3, 'threshold': 0.3, 'using_image_features': True, 'name_of_datasets': 'flickr30k', 'path_of_val_datasets': './annotations/flickr30k/test_captions.json', 'disable_all_entities': False, 'name_of_entities_text': 'vinvl_vgoi_entities', 'prompt_ensemble': True, 'weight_path': 'checkpoints/checkpoints/train_flickr30k/coco_prefix-0029.pt', 'image_folder': './annotations/flickr30k/flickr30k-images/', 'out_path': 'checkpoints/checkpoints/train_flickr30k', 'using_hard_prompt': True, 'soft_prompt_first': True, 'only_hard_prompt': False, 'using_greedy_search': True, 'beam_width': 5, 'debug': False, 'text_prompt': None}
+
+Traceback (most recent call last):
+  File "/home/paperspace/ViECap/validation.py", line 265, in <module>
+    main(args)
+  File "/home/paperspace/.local/lib/python3.9/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/paperspace/ViECap/validation.py", line 217, in main
+    model.load_state_dict(torch.load(args.weight_path, map_location = device))
+  File "/home/paperspace/.local/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/paperspace/.local/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/paperspace/.local/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoints/checkpoints/train_flickr30k/coco_prefix-0029.pt'
+Traceback (most recent call last):
+  File "/home/paperspace/ViECap/evaluation/cocoeval.py", line 2, in <module>
+    from pycocoevalcap.eval import COCOEvalCap
+  File "/home/paperspace/ViECap/evaluation/pycocoevalcap/eval.py", line 2, in <module>
+    from .tokenizer.ptbtokenizer import PTBTokenizer
+  File "/home/paperspace/ViECap/evaluation/pycocoevalcap/tokenizer/ptbtokenizer.py", line 13, in <module>
+    import ipdb
+ModuleNotFoundError: No module named 'ipdb'
