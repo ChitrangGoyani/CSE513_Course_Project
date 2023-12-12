@@ -33,7 +33,7 @@
 * Dataset preparation:  
     * Download the karpathy splits: https://www.kaggle.com/datasets/shtvkumar/karpathy-splits/tasks
     * We will be using only flickr30k for this tutorial.
-    * Place the `dataset_{name_of_dataset}.json` in ./annotations Convert to dataset to list and generate train, test and validation splits by using the `parse_karpathy.py` 
+    * Place the `dataset_{name_of_dataset}.json` in ./annotations/{dataset}/karpathy_split as `dataset.json`. Convert to dataset to list and generate train, test and validation splits by using the `parse_karpathy.py` 
     * run `python entities_extraction.py`
     * run `python texts_features_extraction.py`
     * run `python generate_prompt_ensemble.py` after downloading the vocabulary from the Releases of the original repo.
